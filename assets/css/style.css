@@ -96,6 +96,12 @@ header p{
     border-radius: 10px;
 }
 
+.gifHeader{
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
 #gifs{
     display:grid;
     grid-template-columns: 1fr;

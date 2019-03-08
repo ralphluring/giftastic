@@ -43,8 +43,13 @@ $(document).ready(function(){
         }).then(function(response) {
             // set results to the response data from ajax call
             let results = response.data;
+            console.log(results);
             // create buttons from the data and set the attributes
-            for(let i = 0; i < results.length; i++){            
+            for(let i = 0; i < results.length; i++){ 
+                let gifDiv = $("<div>");
+                let rating = $("<p>");
+                rating.attr("class", "rating");  
+                rating.text(results[i].rating);    
                 let gif = $("<img>");
                 gif.attr("class", "gif");
                 gif.attr("data-state", "still");
@@ -52,7 +57,9 @@ $(document).ready(function(){
                 gif.attr("data-animate", results[i].images.fixed_height.url);  
                 gif.attr("src", results[i].images.fixed_height_still.url);
                 // add the gifs to the page
-                $("#gifs").prepend(gif);
+                gifDiv.append(gif);
+                gifDiv.append(rating);
+                $("#gifs").prepend(gifDiv);
             }
         });
         

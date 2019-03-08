@@ -36,7 +36,7 @@ $(document).ready(function(){
         let queryTopic = $(this).attr("value");
         
         // queryURL for Giphy API
-        let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + queryTopic + "&api_key=FjWs1QzYB8vau7ndQTIg4Mw2ujGoBsUn&limit=10";    
+        let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + queryTopic + "&api_key=FjWs1QzYB8vau7ndQTIg4Mw2ujGoBsUn&limit=10";    
         $.ajax({
         url: queryURL,
         method: "GET"

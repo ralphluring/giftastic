@@ -5,18 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Giftastic</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Work+Sans:100" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div id="buttons"></div>
-    <div class="userInput">
-        <form action="">
-                <label for="userInput">Add More Buttons!</label>
-                <input type="text" id="userInput" name="userInput">
-                <input type="submit" value="Add" id="addButton">
-        </form>
+    <div class="container">
+        <header>
+            <h1>GIF Machine</h1>
+            <p class="instructions">Click the buttons to show GIFS</p>
+            
+        </header>
+        <div id="buttons"></div>
+        <div class="userInput">
+            <form action="" class="userform">
+                    <label for="userInput" class="userInfo" id="more">Add More Buttons!</label>
+                    <p class="instructions">Type and press add to create your own magic GIF buttons</p>
+                    <div class="inputFields">
+                        <input type="text" id="userInput" name="userInput" class="userInfo">
+                        <input type="submit" value="Add" id="addButton" class="userInfo">
+                    </div>
+                    
+            </form>
+        </div>
+        <div id="gifs"></div>
     </div>
-    <div id="gifs"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/js/app.js"></script>
 </body>
 </html>
